@@ -1,0 +1,16 @@
+void main() {
+    int wynik = 2 + 2 * 2; # 6
+    print(wynik);
+    wynik = (2 + 2) * 2; # 8
+    print(wynik);
+
+    float wynik_float = 4.0 + 4.0 / 2.0; # 6.0
+    print(wynik_float);
+    wynik_float = (4.0 + 4.0) / 2.0; # 4.0
+    print(wynik_float);
+
+    wynik_float = 10.0 - 2.0 * 4.0 + 8.0 / 4.0; # 4.0
+    print(wynik_float);
+    wynik = 3 - 2 - 1; # 0
+    print(wynik);
+}

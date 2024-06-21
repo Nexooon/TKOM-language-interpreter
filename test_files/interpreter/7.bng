@@ -1,0 +1,17 @@
+void main() {
+    float a = 50.0;
+    float b = 100.0;
+
+    float wynik = iloraz(a, b);
+    print(wynik); # wynik==0.5
+
+    wynik = iloraz(20.0, 10.0);
+    print(wynik); # wynik==2
+
+    int wynik2 = iloraz(a, b);
+    ### SemanticError : Ln 11 Col 5 : Type mismatch.
+}
+
+float iloraz(float x, float y) {
+    return x/y;
+}

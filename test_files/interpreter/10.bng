@@ -1,0 +1,15 @@
+int factorial(int n) {
+    if (n==0 || n==1) {
+        return 1;
+    }
+    else {
+        return n * factorial(n-1);
+    }
+}
+
+void main() {
+    str num = input("Wprowadź liczbę: ");
+
+    int fact = factorial(to_int(num));
+    print("Silnia liczby " + num + " wynosi: " + to_str(fact));
+}

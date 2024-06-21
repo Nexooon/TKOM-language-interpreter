@@ -1,0 +1,55 @@
+void main() {
+    cur a = 100 PLN;
+    cur b = 10.5 EUR;
+    cur c = 82.12 JPY;
+
+    # typ cur posiada pola type (rodzaj waluty - curtype) oraz value (ilość pieniędzy - float)
+    curtype d = a.type; # d==PLN
+    float e = a.value; # e==100.0
+
+    # można zmienić wartość value
+    c.set_value(90.77); # c==90.77 JPY
+
+
+    cur sum = a + b; # waluta wynikowa zawsze taka sama jak pierwszy element operacji
+    cur minus = a - b;
+
+
+    a = a + 50 USD; # a dalej w PLN
+    b = b - 1 EUR; # b dalej w EUR
+    print("po operacjach:");
+    print(a);
+    print(b);
+
+    # porównywanie walut
+    # a > b
+    # gdy typy porównywanych walut nie są jednakowe, na potrzeby porównania waluty sprowadzane są do waluty głównej, zdefiniowanej w pliku konfiguracyjnym z kursami
+
+    # transfer środków
+    # pomiędzy zmiennymi przelewana jest równowartość wyrażenia znajdującego się pomiędzy znakami "->"
+    # zmienna po lewej jest pomniejszana o tą wartość, a zmienna po prawej jest o nią powiększana
+    from a -> 10 PLN -> b;
+    from a -> 5 EUR -> b;
+    from a -> 0.1*a + 2.24 JPY -> b;
+
+    cur x = 100 PLN;
+    cur y = 200 PLN;
+    from x -> 10 PLN -> y;
+    print(x);
+    print(y);
+
+    # można też pominąć zmienną po jednej stronie:
+    from a -> 10 PLN; # pomniejszenie a o 10 PLN
+    from 10 PLN -> b; # zwiększenie b o 10 PLN
+
+    cur z = 30 PLN;
+    from z -> 10 PLN;
+    print(z);
+    from 20 PLN -> z;
+    print(z);
+
+
+    if (a > b) {
+        print(a);
+    }
+}

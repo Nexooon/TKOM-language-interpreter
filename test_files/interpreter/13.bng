@@ -1,0 +1,9 @@
+void funkcja(int a) {
+    a += 2;
+}
+
+void funkcja(int a, str b) {
+    a += 2;
+    print(b);
+}
+### ParserError: Ln 5 Col 1 : Redefinition of a function from line 1

@@ -1,0 +1,21 @@
+void main() {
+    int a;
+    a = 220;
+    a = 110;
+
+    float b;
+    b = 2.2;
+    b = 3.132;
+
+    str c;
+    c = "abc";
+    c = "def";
+
+    cur d;
+    d = 100 PLN;
+    d = 10.23 USD;
+
+    # próba przypisania do cur liczby float z więcej niż 2 cyframi po przecinku skutkuje zaokrągleniem kwoty do 2 miejsc po przecinku
+    d = 12.454 JPY;
+    print(d); # 12.45 JPY
+}

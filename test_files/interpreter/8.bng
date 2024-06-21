@@ -1,0 +1,25 @@
+void przekazywanie_przez_referencje(float a, str b, cur c, dict d) {
+    a += 7.21;
+    b = "zmiana";
+    c = c + 10 USD;
+    d.add("konto", 10 PLN);
+}
+
+void main() {
+    float x = 12.91;
+    str y = "tekst";
+    cur z = 30 USD;
+    dict zz = {};
+
+    print(x);
+    print(y); # x=12.91; y="tekst"
+    print(z);
+    print(zz); # z=30.00 USD, zz={}
+
+    przekazywanie_przez_referencje(x, y, z, zz);
+
+    print(x);
+    print(y); # x=20.12; y="zmiana"
+    print(z);
+    print(zz); # z=40.00 USD, zz={"konto": 10 PLN}
+}

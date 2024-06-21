@@ -1,0 +1,4 @@
+void main() {
+    str wejscie = input("wprowadz liczbe: ");
+    print("wprowadzono: " + wejscie);
+}

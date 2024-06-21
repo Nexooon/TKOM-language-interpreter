@@ -1,0 +1,7 @@
+int a = 2;
+float b = 2.12;
+str napis = "abc";
+cur pieniadze = 40 PLN;
+curtype rodzaj = EUR;
+dict słownik = {};
+bool passed = true;

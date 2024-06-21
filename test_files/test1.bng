@@ -1,0 +1,74 @@
+void main(){
+
+
+    cur a = 100 PLN;
+    cur b = 10.5 EUR;
+    cur c = 82.12 JPY;
+
+    # typ cur posiada pola type (rodzaj waluty - curtype) oraz amount (ilość pieniędzy - float)
+    curtype d = a.type; # d==PLN
+    float e = a.amount; # e==100.0
+
+    # można im również zmienić wartość
+    c.amount = 90.77; # c==90.77 JPY;
+
+    # zmieniając pole type dokonujemy przewalutowania
+    c.type = USD; # c==0.59 USD
+    c.type = b.type; # c==0.55 EUR
+
+    cur sum = a + b; # waluta wynikowa zawsze taka sama jak pierwszy element operacji
+    cur minus = a - b;
+
+    a += 50 USD; # a dalej w PLN
+    b -= 1 EUR; # b dalej w EUR
+
+
+    # porównywanie walut
+    # a > b;
+    # gdy typy porównywanych walut nie są jednakowe, na potrzeby porównania waluta z prawej strony jest przekonwertowana do rodzaju waluty z lewej strony
+
+
+    # transfer środków
+    # pomiędzy zmiennymi przelewana jest równowartość wyrażenia znajdującego się pomiędzy znakami "->"
+    # zmienna po lewej jest pomniejszana o tą wartość, a zmienna po prawej jest o nią powiększana
+    from a -> 10 PLN -> b;
+    from a -> 5 EUR -> b;
+    from a -> 0.1*a + 2.24 JPY -> b;
+
+    # można też pominąć zmienną po jednej stronie:
+    from a -> 10 PLN; # pomniejszenie a o 10 PLN
+    from 10 PLN -> b; # zwiększenie b o 10 PLN
+
+
+    if (a > b) {
+        print(a);
+    }
+
+
+
+    dict wallet = {};
+    dict wallet2 = {
+        "oszczędności": 2000 PLN,
+        "inwestycje USD": 100 USD
+    };
+
+    cur a = wallet.get("oszczędności");
+
+    dict dolary = wallet.get(USD); # zwraca słownik zawierający wszystkie konta w dolarach (filtrowanie)
+
+    wallet.add("konto EUR", 20.12 EUR);
+
+    wallet.add(12, 23);
+    ### TypeError : line 13 : cannot assign int to dict key
+    ### TypeError : line 13 : cannot assign int to dict value
+
+
+    for account in wallet {
+        print(account.name);
+        print(account.value);           # cały typ cur
+        print(account.value.amount);    # float
+        print(account.value.type);      # curtype
+    }
+
+
+}

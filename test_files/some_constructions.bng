@@ -1,0 +1,33 @@
+if (10 <= 2 || 20.2 > 10) {
+    print("dobrze");
+}
+else {
+    print("źle");
+}
+
+bool return_true() {
+    return true;
+}
+
+if (10 > 2 && 102.22 < 234.121) {
+    print("dobrze");
+}
+elif return_true() {
+    print("dobrze");
+}
+
+
+str c = "tekst tekst";
+str d = " wiecej tekstu";
+str konkatenacja = c + d;
+
+
+while a {
+    # do sth
+}
+
+# iterowanie po słowniku
+dict wallet = {};
+for account in wallet {
+    # do sth
+}

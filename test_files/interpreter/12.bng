@@ -1,0 +1,9 @@
+void funkcja() {
+    float a = 2.2;
+}
+
+void main() {
+    funkcja();
+    print(a);
+    ### SemanticError : Ln 7 Col 11 : 'a' was not declared in this scope
+}

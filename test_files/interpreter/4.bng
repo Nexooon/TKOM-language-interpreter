@@ -1,0 +1,22 @@
+void main() {
+    if (10 <= 2 || 20.2 > 10) {
+        print("dobrze");
+    }
+    else {
+        print("źle");
+    }
+
+    if (10 > 2 && 102.22 < 234.121) {
+        print("dobrze");
+    }
+    elif return_true() {
+        print("dobrze");
+    }
+    else {
+        print("źle");
+    }
+}
+
+bool return_true() {
+    return true;
+}

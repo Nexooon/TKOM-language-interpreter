@@ -1,0 +1,22 @@
+void main() {
+    int a = 2;
+    int b = 4;
+    int suma = a + b;
+    int roznica = a - b;
+    int iloczyn = a * b;
+    a += 5;
+    a -= 3;
+
+    float aa = 2.5;
+    float bb = 4.3;
+    float suma_2 = aa + bb;
+    float roznica_2 = aa - bb;
+    float iloczyn_2 = aa * bb;
+    float iloraz_2 = aa / bb;
+    aa += 5.51;
+    aa -= 3.12;
+
+    str c = "tekst tekst";
+    str d = " wiecej tekstu";
+    str konkatenacja = c + d;
+}

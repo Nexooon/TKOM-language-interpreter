@@ -1,0 +1,26 @@
+void wypisz() {
+    print("hej, tutaj funkcja");
+    return;
+}
+
+int dodaj_wieksze(int a, int b, int c) {
+    if (a > b) {
+        return a + c;
+    }
+    else {
+        return b + c;
+    }
+}
+
+void main(){
+    int zmienna = 10;
+    int zmienna2 = 20;
+
+    int i = 0;
+    while i < 3 {
+        wypisz();
+        int wynik = dodaj_wieksze(zmienna, zmienna2, i);
+        print(wynik);
+        i += 1;
+    }
+}

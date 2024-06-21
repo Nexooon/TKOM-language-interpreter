@@ -1,0 +1,50 @@
+void main() {
+    dict wallet = {};
+    dict wallet2 = {
+        "oszczędności": 2000 PLN,
+        "inwestycje USD": 100 USD
+    };
+
+    cur a = wallet2.get("oszczędności");
+    print(a);
+
+    dict dolary = wallet2.get(USD); # zwraca słownik zawierający wszystkie konta w dolarach (filtrowanie)
+    print("filtered:");
+    for account in dolary {
+        print(account.name);
+        print(account.value);
+    }
+
+    wallet2.add("konto EUR", 20.12 EUR);
+
+    #wallet.add(12, 23);
+    ### TypeError : line 13 : Dictionary accepts only str and cur
+
+    print("wallet2:");
+    for account in wallet2 {
+        print(account.name);
+        print(account.value);           # cały typ cur
+        print(account.value.value);     # float
+        print(account.value.type);      # curtype
+        print("----");
+    }
+
+    # do słownika można też dodać referencję do waluty
+    cur waluta_do_konta = 40 EUR;
+    wallet.add("konto", waluta_do_konta);
+
+    # Weryfikacja przekazywania przez referencję
+    fun1(wallet);
+
+    print("Wallet: ");
+    print(wallet);          # {'konto': 10.00 EUR}
+    print(waluta_do_konta); # 10.00 EUR
+}
+
+void fun1(dict wallet) {
+    for account in wallet {
+        if (account.value.type == EUR) {
+            account.value.set_value(10);
+        }
+    }
+}

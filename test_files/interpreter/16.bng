@@ -1,0 +1,20 @@
+void main() {
+    int number_int = 24;
+    float number_float = 9.87;
+    str string_int = "215";
+    str string_float = "1.22";
+    cur currency = 10 EUR;
+    curtype currency_type = USD;
+
+
+    int a = to_int(number_float); # a==9
+    int b = to_int(string_int); # b==215
+
+    float c = to_float(number_int); # c==24.0
+    float d = to_float(string_float); # d==1.22
+
+    str napis = to_str(number_int); # napis=="24"
+    str napis_float = to_str(number_float); # napis_float=="9.87"
+    str napis_cur = to_str(currency); # napis_cur=="10 EUR"
+    str napis_curtype = to_str(currency_type); # napis_curtype=="USD"
+}
