@@ -610,7 +610,7 @@ void main() {
     wallet.add("konto", waluta_do_konta);
 
     for account in wallet {
-        if (account.value.type == "EUR") {
+        if (account.value.type == EUR) {
             account.value.set_value(10);
         }
     }
